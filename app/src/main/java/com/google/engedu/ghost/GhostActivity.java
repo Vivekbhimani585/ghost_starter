@@ -64,7 +64,7 @@ public class GhostActivity extends AppCompatActivity implements View.OnClickList
         AssetManager assetManager = getAssets();
         try {
             InputStream inputStream = assetManager.open("words.txt");
-            dictionary = new SimpleDictionary(inputStream);
+            dictionary = new FastDictionary(inputStream);
         } catch (IOException e) {
             Toast.makeText(this, "Could not load dictionary", Toast.LENGTH_SHORT).show();
 
